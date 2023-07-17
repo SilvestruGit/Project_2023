@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filme</title>
 </head>
-<body>
+<body onload="bestRatedMovie()">
 
     <div class="zona1">
         <div id="detaliiFilm">
@@ -35,25 +35,20 @@
                 </div>
             </form>
         </div>
-        <button id="adauga" onclick="displayMovies()">Adauga un film nou</button>
+        <button id="adauga" onclick="addMovie()">Adauga un film nou</button>
     </div>
     
     <div class="zona23">
+        <h1>Filme disponibile</h1>
         <div class="zona2">
-            <h1 id="hZona2">Lista Filme</h1>
-            <div>
-                <ul id="listaFilme">
-
-                </ul>
+            <div id="divFilme">
+                
             </div>
             
         </div>
     
         <div class="zona3">
-            <h2>Zona 3</h2>
-            <h2>Zona 3</h2>
-            <h2>Zona 3</h2>
-            <h2>Zona 3</h2>
+            <h2 id="empty">kjbfsdkbf</h2>
 
         </div>
     </div>

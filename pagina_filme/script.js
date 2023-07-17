@@ -1,4 +1,4 @@
-
+let vectorFilme = [];
 
 function showRating() {
     let slider = document.querySelector('#ratingSlider');
@@ -17,32 +17,57 @@ function Movie(name, trailer, poster, rating) {
     this.rating = rating;
 }
 
+function addMovie() {
+    let newMovie = new Movie(
+        document.getElementById('nume').value,
+        document.getElementById('trailer').value,
+        document.getElementById('poster').value,
+        document.getElementById('ratingSlider').value
+    );
+    vectorFilme.push(newMovie);
+    displayMovies();
+    bestRatedMovie();
+}
+
 function displayMovies() {
-    let vectorFilme = [];
 
-    let movie1 = new Movie('Indiana Johnes', 'https://www.youtube.com/watch?v=eQfMbSe7F2g',
-                            'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTO-vtYCPi12ty1aADP6BnlZ1r2cBDgXaxpQkrIqLFrGPcHTPS9',
-                            '2.5');
-    vectorFilme.push(movie1);
-    vectorFilme.push(movie1);
-    vectorFilme.push(movie1);
+    console.log(vectorFilme.length);
+    document.getElementById('divFilme').innerHTML = '';
 
-    // console.log(vectorFilme.length);
-
-
-    document.getElementById('listaFilme').innerHTML = '';
-
-    let list = document.getElementById('listaFilme');
+    let list = document.getElementById('divFilme');
     
     vectorFilme.forEach(film => {
-        let li = document.createElement('li');
-        let vid = document.createElement('video');
-        vid.src = film.trailer;
-        li.innerText = film.name;
-        list.appendChild(li);
-        
+        let p = document.createElement('p');
+
+        let img = document.createElement('img');
+
+        img.src = film.poster;
+
+        p.innerText = film.name + " are un rating de " + film.rating + "/5 stele";
+        list.appendChild(p);
+        list.appendChild(img);
     });
-    
+}
 
+function bestRatedMovie() {
+    if (vectorFilme.length === 0) {
+        document.getElementById('empty').innerHTML = 'Nu exista momentan filme!';
+    }
+    else {
+        let best = vectorFilme[0];
+        vectorFilme.forEach(film => {
+            if (parseFloat(film.rating) >= parseFloat(best.rating)) {
+                best = film;
+            }
+        })
+        let p = document.createElement('h2');
+        p.innerText = best.name + " are un rating de " + best.rating + "/5 stele";
 
+        let img = document.createElement('img');
+        img.src = best.poster;
+
+        document.getElementById('empty').innerHTML = '';
+        document.getElementById('zona3').appendChild(p);
+        document.getElementById('zona3').appendChild(img);
+    }
 }

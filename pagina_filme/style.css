@@ -7,11 +7,27 @@ html,body{
     background-color: aliceblue;
 }
 
+#divFilme img {
+    width: 200px;
+    height: 300px;
+}
 
+li {
+    font-size: 20px;
+}
 
 #steaRating {
     display: flex;
     justify-content: flex-start;
+}
+
+#divFilme {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    height: 500px;
+    overflow: auto;
 }
 
 #result {
@@ -60,5 +76,4 @@ form {
 
 .zona23 {
     width: 60%;
-    
 }
