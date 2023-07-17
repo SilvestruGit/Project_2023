@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filme</title>
+</head>
+<body>
+
+    <div class="zona1">
+        <div id="detaliiFilm">
+            <form action="">
+                <label for="nume">Denumire: </label>
+                <input type="text" id="nume" value="Indiana Jones">
+                <br>
+    
+                <label for="trailer">Link trailer: </label>
+                <input type="text" id="trailer" value="https://www.youtube.com/watch?v=eQfMbSe7F2g">
+                <br>
+
+                <label for="poster">Link poster: </label>
+                <input type="text" id="poster" value="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTO-vtYCPi12ty1aADP6BnlZ1r2cBDgXaxpQkrIqLFrGPcHTPS9">
+                <br>
+
+                <label for="ratingSlider">Rating</label>
+                <input type="range" min="1" max="5" step = 0.1  id="ratingSlider" onchange="showRating()">
+
+                <div id="steaRating">
+                    <input type="text" id="result" value="2.5/5" readonly>
+                    <label for="result" >
+                        <img src="https://as1.ftcdn.net/v2/jpg/01/21/64/88/1000_F_121648819_ZQ0tZ6tjLzxim1SG7CQ86raBw4sglCzB.jpg" width="25" height="25" alt="Image not available!">
+                    </label>
+                </div>
+            </form>
+        </div>
+        <button id="adauga" onclick="displayMovies()">Adauga un film nou</button>
+    </div>
+    
+    <div class="zona23">
+        <div class="zona2">
+            <h1 id="hZona2">Lista Filme</h1>
+            <div>
+                <ul id="listaFilme">
+
+                </ul>
+            </div>
+            
+        </div>
+    
+        <div class="zona3">
+            <h2>Zona 3</h2>
+            <h2>Zona 3</h2>
+            <h2>Zona 3</h2>
+            <h2>Zona 3</h2>
+
+        </div>
+    </div>
+    
+
+</body>
+</html>

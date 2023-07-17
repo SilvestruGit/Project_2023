@@ -1,0 +1,64 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: aliceblue;
+}
+
+
+
+#steaRating {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#result {
+    width: 50px;
+}
+
+input {
+    font-size: large;
+    background-color: aliceblue;
+}
+
+.zona1 {
+    display: flex;
+    width: 20%;
+    height: 100%;
+    flex-wrap: wrap;
+    margin: 20px;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 35px;
+    /* float: right; */
+    /* margin-right: 50px; */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+#result {
+    display: flex;
+    border: none;
+    font-size: 20px;
+}
+
+.zona2 {
+    margin: 20px;
+    height: 65%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.zona23 {
+    width: 60%;
+    
+}

@@ -1,0 +1,33 @@
+.uppercase {
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.main {
+    border: 1px solid;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    padding: 10px;
+    resize: both;
+    overflow: auto;
+}
+
+#inputs {
+    position: relative;
+    top: 5px;
+}
+
+h2 input {
+    max-width: 100px;
+}
+
+#buttons {
+    position: relative;
+    top: 5px;
+}
+
+#buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
