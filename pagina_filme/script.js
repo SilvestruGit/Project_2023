@@ -56,18 +56,37 @@ function bestRatedMovie() {
     else {
         let best = vectorFilme[0];
         vectorFilme.forEach(film => {
-            if (parseFloat(film.rating) >= parseFloat(best.rating)) {
+            if (parseFloat(film.rating) > parseFloat(best.rating)) {
                 best = film;
             }
         })
         let p = document.createElement('h2');
-        p.innerText = best.name + " are un rating de " + best.rating + "/5 stele";
+        p.innerText = best.name + " " + best.rating + "/5 stele";
 
         let img = document.createElement('img');
         img.src = best.poster;
 
-        document.getElementById('empty').innerHTML = '';
+        let header = document.createElement('h2');
+        header.innerText = 'Top rated';
+
+        document.getElementById('zona3').innerHTML = '';
+        document.getElementById('zona3').appendChild(header);
         document.getElementById('zona3').appendChild(p);
         document.getElementById('zona3').appendChild(img);
     }
+}
+
+function changePColor() {
+    const button = document.querySelector('#divFilme');
+    
+
+    button.addEventListener('click', () => {
+        let ratingTotal = vectorFilme.reduce((partialSum, a) => partialSum + parseFloat(a.rating), 0);
+    
+        console.log(ratingTotal/vectorFilme.length);
+        document.getElementById('pbuget').innerText = 'Rating mediu al filmelor din lista: ' + 
+                                                (ratingTotal/vectorFilme.length).toPrecision(3) + ' stele.';
+        const element = document.querySelector('#pbuget');
+        element.style.color = 'green';
+});
 }

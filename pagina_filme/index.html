@@ -25,7 +25,7 @@
                 <br>
 
                 <label for="ratingSlider">Rating</label>
-                <input type="range" min="1" max="5" step = 0.1  id="ratingSlider" onchange="showRating()">
+                <input type="range" min="1" max="5" step = 0.1  id="ratingSlider" onclick="showRating()">
 
                 <div id="steaRating">
                     <input type="text" id="result" value="2.5/5" readonly>
@@ -40,15 +40,15 @@
     
     <div class="zona23">
         <h1>Filme disponibile</h1>
-        <div class="zona2">
-            <div id="divFilme">
-                
+        <div class="zona2" onclick="changePColor()">
+            <div id="divFilme"></div>
+            <div id="buget">
+                <p id="pbuget"></p>
             </div>
-            
         </div>
     
-        <div class="zona3">
-            <h2 id="empty">kjbfsdkbf</h2>
+        <div id="zona3">
+            <h2 id="empty"></h2>
 
         </div>
     </div>

@@ -12,9 +12,16 @@ html,body{
     height: 300px;
 }
 
-li {
+#zona3 img {
+    width: 200px;
+    height: 300px;
+}
+
+p {
     font-size: 20px;
 }
+
+
 
 #steaRating {
     display: flex;
@@ -27,6 +34,7 @@ li {
     flex-wrap: wrap;
     margin-top: 100px;
     height: 500px;
+    width: 600px;
     overflow: auto;
 }
 
@@ -68,10 +76,16 @@ form {
 
 .zona2 {
     margin: 20px;
-    height: 65%;
+    height: 55%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+.zona2 #pbuget {
+    position: relative;
+    top: 300px;
+    left: 100px;
 }
 
 .zona23 {
