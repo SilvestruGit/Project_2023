@@ -8,8 +8,8 @@ html,body{
 }
 
 #divFilme img {
-    width: 200px;
-    height: 300px;
+    width: 150px;
+    height: 200px;
 }
 
 #zona3 img {
@@ -79,7 +79,7 @@ form {
     height: 55%;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .zona2 #pbuget {

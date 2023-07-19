@@ -1,3 +1,10 @@
+function Movie(name, trailer, poster, rating) {
+    this.name = name;
+    this.trailer = trailer;
+    this.poster = poster;
+    this.rating = rating;
+}
+
 let vectorFilme = [];
 
 function showRating() {
@@ -7,14 +14,7 @@ function showRating() {
     slider.addEventListener('input', function(event) {
         let sliderValue = event.target.value;
         result.value = sliderValue + '/5';
-    });
-}
-
-function Movie(name, trailer, poster, rating) {
-    this.name = name;
-    this.trailer = trailer;
-    this.poster = poster;
-    this.rating = rating;
+    }); 
 }
 
 function addMovie() {
@@ -42,6 +42,7 @@ function displayMovies() {
         let img = document.createElement('img');
 
         img.src = film.poster;
+        img.className = 'posterFilm';
 
         p.innerText = film.name + " are un rating de " + film.rating + "/5 stele";
         list.appendChild(p);
@@ -79,7 +80,6 @@ function bestRatedMovie() {
 function changePColor() {
     const button = document.querySelector('#divFilme');
     
-
     button.addEventListener('click', () => {
         let ratingTotal = vectorFilme.reduce((partialSum, a) => partialSum + parseFloat(a.rating), 0);
     
@@ -88,5 +88,16 @@ function changePColor() {
                                                 (ratingTotal/vectorFilme.length).toPrecision(3) + ' stele.';
         const element = document.querySelector('#pbuget');
         element.style.color = 'green';
-});
+    });
 }
+
+// function changepColorBack() {
+//     let body = document.getElementsByClassName('body');
+//     console.log(333);
+//     body.addEventListener('click', () => {
+//         console.log(222);
+//         let element = document.getElementById('#pbuget');
+//         if (element != null)
+//             element.style.color = 'black';
+//     }); 
+// }

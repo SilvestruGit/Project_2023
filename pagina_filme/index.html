@@ -7,11 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filme</title>
 </head>
-<body onload="bestRatedMovie()">
-
+<body onclick="">
     <div class="zona1">
         <div id="detaliiFilm">
-            <form action="">
+            <form>
                 <label for="nume">Denumire: </label>
                 <input type="text" id="nume" value="Indiana Jones">
                 <br>
@@ -25,7 +24,7 @@
                 <br>
 
                 <label for="ratingSlider">Rating</label>
-                <input type="range" min="1" max="5" step = 0.1  id="ratingSlider" onclick="showRating()">
+                <input type="range" min="1" max="5" step = 0.1  id="ratingSlider" oninput="showRating()">
 
                 <div id="steaRating">
                     <input type="text" id="result" value="2.5/5" readonly>
@@ -49,7 +48,6 @@
     
         <div id="zona3">
             <h2 id="empty"></h2>
-
         </div>
     </div>
     
